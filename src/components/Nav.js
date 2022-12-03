@@ -4,7 +4,7 @@ const Nav = () => {
   return (
     <header>
       <nav>
-        <a href="/" className={styles.logo}>
+        <a href="/blog-client" className={styles.logo}>
           personal blog
         </a>
         {/* <ul className={styles["nav-items"]}>

@@ -4,7 +4,9 @@ const Footer = ({ text }) => {
   return (
     <footer>
       <div className={styles["footer-text"]}>{text}</div>
-      <div className={styles["icon"]}>Github</div>
+      <a href="https://github.com/faceyage/blog-client" className={styles.icon}>
+        Github
+      </a>
     </footer>
   );
 };

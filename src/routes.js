@@ -4,11 +4,11 @@ import Post from "./components/Post";
 
 export const routes = [
   {
-    path: "/",
+    path: "/blog-client",
     component: Home,
   },
   {
-    path: "/posts/:postid",
+    path: "/blog-client/posts/:postid",
     component: Post,
   },
 ];

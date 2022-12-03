@@ -3,7 +3,7 @@ import styles from "../styles/PostPreview.module.scss";
 
 const PostPreview = ({ title, content, date, imgUrl, id }) => {
   return (
-    <a href={`posts/${id}`}>
+    <a href={`blog-client/posts/${id}`}>
       <div className={styles.post}>
         <img
           src={
