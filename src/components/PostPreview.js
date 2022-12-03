@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import styles from "../styles/PostPreview.module.scss";
+import { Link } from "react-router-dom";
 
 const PostPreview = ({ title, content, date, imgUrl, id }) => {
   return (
-    <a href={`/posts/${id}`}>
+    <Link to={`/posts/${id}`}>
       <div className={styles.post}>
         <img
           src={
@@ -21,7 +21,7 @@ const PostPreview = ({ title, content, date, imgUrl, id }) => {
           <p className={styles["post-date"]}>{date}</p>
         </div>
       </div>
-    </a>
+    </Link>
   );
 };
 

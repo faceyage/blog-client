@@ -1,15 +1,13 @@
 import styles from "../styles/Nav.module.scss";
+import { Link } from "react-router-dom";
 
 const Nav = () => {
   return (
     <header>
       <nav>
-        <a href="/" className={styles.logo}>
+        <Link to="/" className={styles.logo}>
           personal blog
-        </a>
-        {/* <ul className={styles["nav-items"]}>
-        <li>Contact</li>
-      </ul> */}
+        </Link>
       </nav>
     </header>
   );

@@ -30,7 +30,7 @@ const Post = () => {
   //function for fetching and updating the comments from api
   const updateComments = async () => {
     try {
-      const res = await fetch(`http://127.0.0.1:3000/posts/${postid}/comments`, {
+      const res = await fetch(`https://blog-api-ffa9.onrender.com/posts/${postid}/comments`, {
         mode: "cors",
       });
       const data = await res.json();
