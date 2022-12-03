@@ -1,0 +1,85 @@
+@use "./abstracts/" as *;
+
+.post {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 1rem;
+
+  .top {
+    @include flex-center;
+    flex-direction: column;
+
+    .title {
+      font-weight: bold;
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+  }
+
+  .post-image {
+    object-fit: cover;
+    width: 100%;
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem 2rem;
+
+    border: 1px solid var(--text-color2);
+    border-radius: 0.5rem;
+    color: var(--text-color2);
+    font-size: large;
+    .name {
+      margin-bottom: 0.4rem;
+    }
+  }
+
+  p {
+    font-size: 20px;
+  }
+}
+
+@include tablet {
+  .post {
+    gap: 3rem;
+    margin-bottom: 3rem;
+
+    .top {
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+
+      .title {
+        margin-bottom: 0;
+      }
+    }
+
+    p {
+      font-size: 1.45rem;
+    }
+  }
+
+  .post-page {
+    margin: 0 3rem;
+  }
+}
+
+@include desktop {
+  .post-page {
+    width: 800px;
+  }
+
+  .post {
+    .post-image {
+      align-self: flex-start;
+      max-width: 60%;
+      max-height: 500px;
+    }
+  }
+
+  .post-page {
+    margin: 0 10rem;
+  }
+}

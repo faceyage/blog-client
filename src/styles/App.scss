@@ -1,0 +1,81 @@
+@use "./abstracts/" as *;
+@use "./colors" as *;
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+main {
+  max-width: 90%;
+  margin: 0 auto;
+}
+
+main {
+  margin: 1rem auto;
+}
+
+//to keep the damn footer at the bottom
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  main {
+    flex: 1;
+  }
+}
+
+.btn {
+  background-color: transparent;
+  color: var(--text-color);
+  border: 1px solid var(--text-color);
+  padding: 0.5rem 1rem;
+  transition: background-color 0.4s ease-in-out;
+
+  &:hover {
+    background-color: var(--text-color);
+    color: var(--bg-color);
+  }
+}
+
+/* loader while fetching data */
+
+.loader {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+
+  &:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #fff;
+    border-color: #fff transparent #fff transparent;
+    animation: loader 1.2s linear infinite;
+  }
+}
+
+@keyframes loader {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

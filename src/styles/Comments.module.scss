@@ -1,0 +1,83 @@
+@use "./abstracts/" as *;
+
+.comments-container {
+  // border: 2px solid white;
+  padding: 1.5rem;
+  border-radius: 0.7rem;
+
+  .comments-title {
+    font-weight: bold;
+    font-size: large;
+    margin-bottom: 1rem;
+  }
+}
+
+.comment-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid white;
+
+  .form-group {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.comments {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.comment {
+  padding: 0.6rem 1rem;
+  border-left: 1px solid gray;
+
+  .top {
+    margin-bottom: 0.3rem;
+
+    .name {
+      margin-right: 0.5rem;
+      font-weight: bold;
+    }
+
+    .date {
+      color: var(--text-color2);
+    }
+  }
+
+  .content {
+  }
+}
+
+//style input
+
+input {
+  border-radius: 0.5rem;
+  padding: 0.3rem 0.5rem;
+}
+
+@include tablet {
+  .comments-container {
+    padding: 0;
+    .comments-title {
+      font-size: x-large;
+    }
+  }
+
+  input {
+    border-radius: 0.5rem;
+    padding: 0.5rem 0.8rem;
+    width: 50%;
+  }
+}
+
+@include desktop {
+  input {
+    width: 30%;
+  }
+}

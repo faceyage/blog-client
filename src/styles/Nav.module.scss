@@ -1,0 +1,21 @@
+@use "./abstracts/" as *;
+
+nav {
+  display: flex;
+  justify-content: space-between;
+
+  padding: 1rem;
+
+  .logo {
+    font-weight: bold;
+    font-size: medium;
+  }
+}
+
+@include tablet {
+  nav {
+    .logo {
+      font-size: large;
+    }
+  }
+}

@@ -1,0 +1,28 @@
+@use "./abstracts/" as *;
+
+.hero {
+  margin-bottom: 3rem;
+
+  .hero-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .hero-text {
+    font-size: 1.2rem;
+    color: var(--text-color2);
+  }
+}
+
+@include tablet {
+  .hero {
+    .hero-title {
+      font-size: 2rem;
+    }
+
+    .hero-text {
+      font-size: 1.5rem;
+    }
+  }
+}
