@@ -14,7 +14,7 @@ const Post = () => {
   //function for fetching the post from api
   const fetchPost = async () => {
     try {
-      const res = await fetch("http://127.0.0.1:3000/posts/" + postid, {
+      const res = await fetch("https://blog-api-ffa9.onrender.com/posts/" + postid, {
         mode: "cors",
       });
       const data = await res.json();

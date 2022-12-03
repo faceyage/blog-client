@@ -9,7 +9,7 @@ const Posts = () => {
 
   //fetch posts and set to the posts state
   useEffect(() => {
-    fetch("http://127.0.0.1:3000/posts", {
+    fetch("https://blog-api-ffa9.onrender.com/posts", {
       mode: "cors",
     })
       .then((res) => res.json())

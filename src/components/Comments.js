@@ -16,7 +16,10 @@ const Comments = ({ comments, postid, updateComments }) => {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ user, content }),
     };
-    const res = await fetch(`http://127.0.0.1:3000/posts/${postid}/comments`, requestOptions);
+    const res = await fetch(
+      `https://blog-api-ffa9.onrender.com/posts/${postid}/comments`,
+      requestOptions
+    );
     const data = await res.json();
     updateComments();
   };
